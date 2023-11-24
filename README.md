@@ -1,4 +1,12 @@
-### Hi there 👋
+### Hey 👋, I'm kakunasa
+
+[![Github](https://img.shields.io/github/followers/kakunasa?label=Follow&style=social)](https://github.com/kakunasa)
+
+![](https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=kakunasa&theme=github)
+![](https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=kakunasa&theme=github)
+![](https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=kakunasa&theme=github)
+![](https://github-profile-summary-cards.vercel.app/api/cards/stats?username=kakunasa&theme=github)
+![](https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=kakunasa&theme=github)
 
 <!--
 **kakunasa/kakunasa** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
