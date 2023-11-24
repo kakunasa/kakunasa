@@ -2,11 +2,23 @@
 
 [![Github](https://img.shields.io/github/followers/kakunasa?label=Follow&style=social)](https://github.com/kakunasa)
 
-![](https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=kakunasa&theme=github)
-![](https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=kakunasa&theme=github)
-![](https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=kakunasa&theme=github)
-![](https://github-profile-summary-cards.vercel.app/api/cards/stats?username=kakunasa&theme=github)
-![](https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=kakunasa&theme=github)
+<p align="left">
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=kakunasa&theme=github" height="100"/>
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=kakunasa&theme=github" height="100"/>
+</p>
+
+<p align="left">
+  <img src="https://raw.githubusercontent.com/kakunasa/kakunasa/main/metrics.plugin.skyline.city.svg" height="200"/>
+</p>
+
+<p align="left">
+  <img src="https://raw.githubusercontent.com/kakunasa/kakunasa/main/github-metrics.svg" width="400"/> 
+</p>
+
+[](https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=kakunasa&theme=github)
+[](https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=kakunasa&theme=github)
+[](https://raw.githubusercontent.com/kakunasa/kakunasa/main/metrics.plugin.skyline.city.svg)
+[](https://raw.githubusercontent.com/kakunasa/kakunasa/main/github-metrics.svg)
 
 <!--
 **kakunasa/kakunasa** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
