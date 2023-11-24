@@ -21,7 +21,7 @@ jobs:
           plugin_lines: yes
           plugin_lines_delay: 30
           plugin_lines_sections: repositories, history
-          plugin_lines_repositories_limit: 2
+          plugin_lines_repositories_limit: 40
           plugin_lines_history_limit: 1
           repositories_skipped: |
             @use.patterns
@@ -54,5 +54,5 @@ jobs:
           git config --global user.name 'GitHub Actions'
           git config --global user.email 'actions@github.com'
           git add metrics.plugin.lines.history.svg metrics.plugin.skyline.city.svg
-          git commit -m "Update metrics"
+          git commit --allow-empty -m "Update metrics"
           git push
