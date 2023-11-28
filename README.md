@@ -3,16 +3,16 @@
 [![Github](https://img.shields.io/github/followers/kakunasa?label=Follow&style=social)](https://github.com/kakunasa)
 
 <p align="left">
-  <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=kakunasa&theme=github" height="100"/>
-  <img src="https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=kakunasa&theme=github" height="100"/>
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=kakunasa&theme=github" height="150"/>
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=kakunasa&theme=github" height="150"/>
 </p>
 
 <p align="left">
-  <img src="https://raw.githubusercontent.com/kakunasa/kakunasa/main/metrics.plugin.skyline.city.svg" height="200"/>
+  <img src="https://raw.githubusercontent.com/kakunasa/kakunasa/main/metrics.plugin.skyline.city.svg" height="400"/>
 </p>
 
 <p align="left">
-  <img src="https://raw.githubusercontent.com/kakunasa/kakunasa/main/github-metrics.svg" width="400"/> 
+  <img src="https://raw.githubusercontent.com/kakunasa/kakunasa/main/github-metrics.svg" width="600"/> 
 </p>
 
 [](https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=kakunasa&theme=github)
