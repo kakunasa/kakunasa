@@ -92,7 +92,7 @@ jobs:
         run: |
           git config --global user.name 'GitHub Actions'
           git config --global user.email 'actions@github.com'
-          git add metrics.plugin.lines.history.svg metrics.plugin.skyline.city.svg github-metrics.svg
+          git add metrics.plugin.lines.history.svg metrics.plugin.skyline.city.svg metrics.plugin.habits.charts.svg github-metrics.svg
           git commit --allow-empty -m "Update metrics"
           git pull --rebase
           git push
