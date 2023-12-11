@@ -3,8 +3,7 @@
 [![Github](https://img.shields.io/github/followers/kakunasa?label=Follow&style=social)](https://github.com/kakunasa)
 
 <p align="left">
-  <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=kakunasa&theme=github" height="150"/>
-  <img src="https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=kakunasa&theme=github" height="150"/>
+  <img src="https://raw.githubusercontent.com/kakunasa/kakunasa/main/metrics.plugin.habits.charts.svg" width="600"/>
 </p>
 
 <p align="left">
