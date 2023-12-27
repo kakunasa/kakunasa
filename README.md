@@ -7,7 +7,7 @@
 </p>
 
 <p align="left">
-  <img src="https://raw.githubusercontent.com/kakunasa/kakunasa/main/metrics.plugin.skyline.city.svg" height="400"/>
+  <img src="https://raw.githubusercontent.com/kakunasa/kakunasa/main/metrics.plugin.isocalendar.fullyear.svg" width="600"/>
 </p>
 
 <p align="left">
