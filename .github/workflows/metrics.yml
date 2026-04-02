@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     environment: production
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
 
       - name: Recent activity charts
         uses: lowlighter/metrics@latest
@@ -21,7 +21,7 @@ jobs:
           plugin_habits: yes
           plugin_habits_facts: no
           plugin_habits_charts: yes
-          config_timezone: Asian/Tokyo
+          config_timezone: Asia/Tokyo
 
       - name: Generate Repositories and diff history
         uses: lowlighter/metrics@latest
@@ -46,7 +46,7 @@ jobs:
           token: NOT_NEEDED
           base: ""
           plugin_skyline: yes
-          plugin_skyline_year: 2023
+          plugin_skyline_year: 2026
           plugin_skyline_frames: 120
           plugin_skyline_quality: 1
           plugin_skyline_settings: |
