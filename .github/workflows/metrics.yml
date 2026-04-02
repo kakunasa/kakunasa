@@ -1,107 +1,90 @@
-name: Metrics
-on:
-  # Schedule updates (Runs at 09:00 JST every day)
-  schedule: [{cron: "0 0 * * *"}]
-  # Lines below let you run workflow manually and on each commit
-  workflow_dispatch:
-  push: {branches: ["main"]}
-jobs:
-  github-metrics:
-    runs-on: ubuntu-latest
-    environment: production
-    steps:
-      - uses: actions/checkout@v4
-
-      - name: Recent activity charts
-        uses: lowlighter/metrics@master
-        with:
-          filename: metrics.plugin.habits.charts.svg
-          token: ${{ secrets.METRICS_TOKEN }}
-          base: ""
-          plugin_habits: yes
-          plugin_habits_facts: no
-          plugin_habits_charts: yes
-          config_timezone: Asia/Tokyo
-
-      - name: Generate Repositories and diff history
-        uses: lowlighter/metrics@master
-        with:
-          filename: metrics.plugin.lines.history.svg
-          token: ${{ secrets.METRICS_TOKEN }}
-          base: ""
-          plugin_lines: yes
-          plugin_lines_delay: 30
-          plugin_lines_sections: repositories, history
-          plugin_lines_repositories_limit: 40
-          plugin_lines_history_limit: 10
-          repositories_skipped: |
-            @use.patterns
-            */*
-            +kakunasa/rate-arbitrage
-
-      - name: Generate GitHub City
-        uses: lowlighter/metrics@latest
-        with:
-          filename: metrics.plugin.skyline.city.svg
-          token: NOT_NEEDED
-          base: ""
-          plugin_skyline: yes
-          plugin_skyline_year: 2026
-          plugin_skyline_frames: 120
-          plugin_skyline_quality: 1
-          plugin_skyline_settings: |
-            {
-              "url": "https://honzaap.github.io/GithubCity?name=${login}&year=${year}",
-              "ready": "[...document.querySelectorAll('.display-info span')].map(span => span.innerText).includes('${login}')",
-              "wait": 4,
-              "hide": ".github-corner, .footer-link, .buttons-options, .mobile-rotate, .display-info span:first-child"
-            }
-
-      - name: Full-year calendar
-        uses: lowlighter/metrics@latest
-        with:
-          filename: metrics.plugin.isocalendar.fullyear.svg
-          token: ${{ secrets.METRICS_TOKEN }}
-          base: ""
-          plugin_isocalendar: yes
-          plugin_isocalendar_duration: full-year
-
-      - name: Generate GitHub Profile
-        uses: lowlighter/metrics@latest
-        with:
-          token: ${{ secrets.METRICS_TOKEN }}
-          user: kakunasa
-          template: classic
-          base: header, activity, repositories, metadata
-          config_timezone: Asia/Tokyo
-          filename: github-metrics.svg
-          plugin_achievements: yes
-          plugin_achievements_display: detailed
-          plugin_achievements_secrets: yes
-          plugin_achievements_threshold: B
-          plugin_languages: yes
-          plugin_languages_analysis_timeout: 15
-          plugin_languages_categories: markup, programming
-          plugin_languages_colors: github
-          plugin_languages_limit: 8
-          plugin_languages_recent_categories: markup, programming
-          plugin_languages_recent_days: 14
-          plugin_languages_recent_load: 300
-          plugin_languages_sections: most-used
-          plugin_languages_threshold: 0%
-          plugin_topics: yes
-          plugin_topics_limit: 15
-          plugin_topics_mode: icons
-          plugin_topics_sort: stars
-
-      - name: List files in the repository root
-        run: ls -la
-            
-      - name: Commit and push generated files
-        run: |
-          git config --global user.name 'GitHub Actions'
-          git config --global user.email 'actions@github.com'
-          git add metrics.plugin.lines.history.svg metrics.plugin.skyline.city.svg metrics.plugin.habits.charts.svg metrics.plugin.isocalendar.fullyear.svg github-metrics.svg
-          git commit --allow-empty -m "Update metrics"
-          git pull --rebase
-          git push
+  name: Metrics                                                                                                                                                                         
+  on:                                                                                                                                                                                   
+    schedule: [{cron: "0 0 * * *"}]                                                                                                                                                     
+    workflow_dispatch:                                                                                                                                                                  
+    push: {branches: ["main"]}                                                                                                                                                          
+  jobs:                                                                                                                                                                                 
+    github-metrics:                                                                                                                                                                     
+      runs-on: ubuntu-latest                                                                                                                                                            
+      environment: production                                                                                                                                                           
+      steps:                                                                                                                                                                            
+        - uses: actions/checkout@v4                                                                                                                                                     
+                                                                                                                                                                                      
+        - name: Generate Repositories and diff history                                                                                                                                  
+          uses: lowlighter/metrics@master                                                                                                                                               
+          with:                                                                                                                                                                         
+            filename: metrics.plugin.lines.history.svg                                                                                                                                  
+            token: ${{ secrets.METRICS_TOKEN }}                                                                                                                                         
+            base: ""                                                                                                                                                                    
+            plugin_lines: yes                                                                                                                                                           
+            plugin_lines_delay: 30                                                                                                                                                      
+            plugin_lines_sections: repositories, history                                                                                                                              
+            plugin_lines_repositories_limit: 40                                                                                                                                         
+            plugin_lines_history_limit: 10                                                                                                                                              
+            repositories_skipped: |                                                                                                                                                     
+              @use.patterns                                                                                                                                                             
+              */*                                                                                                                                                                       
+              +kakunasa/rate-arbitrage                                                                                                                                                  
+                                                                                                                                                                                        
+        - name: Generate GitHub City                                                                                                                                                    
+          uses: lowlighter/metrics@master                                                                                                                                               
+          with:                                                                                                                                                                         
+            filename: metrics.plugin.skyline.city.svg                                                                                                                                   
+            token: NOT_NEEDED                                                                                                                                                           
+            base: ""                                                                                                                                                                    
+            plugin_skyline: yes                                                                                                                                                         
+            plugin_skyline_year: 2026                                                                                                                                                   
+            plugin_skyline_frames: 120                                                                                                                                                  
+            plugin_skyline_quality: 1                                                                                                                                                   
+            plugin_skyline_settings: |                                                                                                                                                  
+              {                                                                                                                                                                         
+                "url": "https://honzaap.github.io/GithubCity?name=${login}&year=${year}",                                                                                               
+                "ready": "[...document.querySelectorAll('.display-info span')].map(span => span.innerText).includes('${login}')",                                                       
+                "wait": 4,                                                                                                                                                              
+                "hide": ".github-corner, .footer-link, .buttons-options, .mobile-rotate, .display-info span:first-child"                                                                
+              }                                                                                                                                                                         
+                                                                                                                                                                                        
+        - name: Full-year calendar                                                                                                                                                      
+          uses: lowlighter/metrics@master                                                                                                                                               
+          with:                                                                                                                                                                         
+            filename: metrics.plugin.isocalendar.fullyear.svg                                                                                                                           
+            token: ${{ secrets.METRICS_TOKEN }}                                                                                                                                         
+            base: ""                                                                                                                                                                  
+            plugin_isocalendar: yes                                                                                                                                                     
+            plugin_isocalendar_duration: full-year                                                                                                                                      
+                                                                                                                                                                                        
+        - name: Generate GitHub Profile                                                                                                                                                 
+          uses: lowlighter/metrics@master                                                                                                                                               
+          with:                                                                                                                                                                         
+            token: ${{ secrets.METRICS_TOKEN }}                                                                                                                                         
+            user: kakunasa                                                                                                                                                              
+            template: classic                                                                                                                                                           
+            base: header, activity, repositories, metadata                                                                                                                            
+            config_timezone: Asia/Tokyo
+            filename: github-metrics.svg
+            plugin_languages: yes                                                                                                                                          
+            plugin_languages_analysis_timeout: 15                                                                                                                                       
+            plugin_languages_categories: markup, programming                                                                                                                            
+            plugin_languages_colors: github                                                                                                                                             
+            plugin_languages_limit: 8                                                                                                                                                   
+            plugin_languages_recent_categories: markup, programming                                                                                                                     
+            plugin_languages_recent_days: 14                                                                                                                                          
+            plugin_languages_recent_load: 300                                                                                                                                           
+            plugin_languages_sections: most-used                                                                                                                                        
+            plugin_languages_threshold: 0%                                                                                                                                              
+            plugin_topics: yes                                                                                                                                                          
+            plugin_topics_limit: 15                                                                                                                                                     
+            plugin_topics_mode: icons                                                                                                                                                 
+            plugin_topics_sort: stars                                                                                                                                                   
+                                                                                                                                                                                        
+        - name: List files in the repository root                                                                                                                                       
+          run: ls -la                                                                                                                                                                   
+                                                                                                                                                                                        
+        - name: Commit and push generated files                                                                                                                                         
+          run: |                                                                                                                                                                        
+            git config --global user.name 'GitHub Actions'                                                                                                                              
+            git config --global user.email 'actions@github.com'                                                                                                                       
+            git add metrics.plugin.lines.history.svg metrics.plugin.skyline.city.svg metrics.plugin.isocalendar.fullyear.svg github-metrics.svg                                         
+            git commit --allow-empty -m "Update metrics"                                                                                                                                
+            git pull --rebase                                                                                                                                                           
+            git push
