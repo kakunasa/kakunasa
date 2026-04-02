@@ -13,7 +13,7 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: Recent activity charts
-        uses: lowlighter/metrics@latest
+        uses: lowlighter/metrics@master
         with:
           filename: metrics.plugin.habits.charts.svg
           token: ${{ secrets.METRICS_TOKEN }}
@@ -24,7 +24,7 @@ jobs:
           config_timezone: Asia/Tokyo
 
       - name: Generate Repositories and diff history
-        uses: lowlighter/metrics@latest
+        uses: lowlighter/metrics@master
         with:
           filename: metrics.plugin.lines.history.svg
           token: ${{ secrets.METRICS_TOKEN }}
