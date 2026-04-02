@@ -3,7 +3,10 @@
 [![Github](https://img.shields.io/github/followers/kakunasa?label=Follow&style=social)](https://github.com/kakunasa)
 
 <p align="left">
-  <img src="https://raw.githubusercontent.com/kakunasa/kakunasa/main/metrics.plugin.habits.charts.svg" width="600"/>
+  <img src="https://github-readme-stats.vercel.app/api?username=kakunasa&show_icons=true&theme=default&locale=en" width="600"/>
+</p>
+<p align="left">
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=kakunasa&layout=compact&theme=default" width="600"/>
 </p>
 
 <p align="left">
